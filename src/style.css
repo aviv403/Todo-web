@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(205, 222, 249);
+}
+.todo-title{
+    font-family: cursive;
+    color: rgb(0, 105, 167);
+}
+
+.todo{
+    font-family: cursive;
+    color:rgb(4, 2, 107);
+
+}
+
+div > .material-icons{
+    color: rgb(146, 122, 129);
+}
+
+.navbar{
+    position: fixed;
+    right: 8px;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+}
