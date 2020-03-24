@@ -18,9 +18,6 @@
 .env.test.local
 .env.production.local
 
-*.js linguist-detectable=false
-*.react linguist-detectable=true
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
