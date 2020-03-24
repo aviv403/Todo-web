@@ -7,10 +7,7 @@ import './style.css'
 
 class App extends Component {
   state = {
-    todos: [
-      {id: 1, content: 'buy some milk'},
-      {id: 2, content: 'play mario kart'}
-    ]
+    todos: []
   }
   deleteTask = (id) => {
     let todos = this.state.todos.filter(task => task.id !== id)
@@ -20,21 +17,25 @@ class App extends Component {
   }
 
   addTodo = (todo) => {
-    todo.id = Math.random()
+    todo.id = this.state.todos.length
     let todos = [...this.state.todos, todo]
     this.setState({
       todos
     })
   }
 
+  clearList = () => {
+    this.setState({
+      todos: []
+    })
+  }
 
   render(){
     return (
       <div className='todo-app container'>
-        <Navbar />
-        <h1 className="todo-title center">Todo's</h1>
+        <Navbar clearList={this.clearList} />
         <Todos todos={this.state.todos} deleteTask={this.deleteTask} />
-        <AddTodo todos={this.state.todos} addTodo={this.addTodo}/>
+        <AddTodo todos={this.state.todos} addTodo={this.addTodo} />
       </div>
       
     )
